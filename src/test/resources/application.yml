@@ -1,0 +1,21 @@
+server: 
+  port: 8080
+
+---
+spring.profiles: dev
+
+api:
+ idle:
+  read-timeout: 8000 
+  write-timeout: 8000
+  all-idle-timeout: 8000
+ auth: 
+  url: http://localhost:8089
+  read-timeout: 5000 
+  write-timeout: 5000
+  connection-timeout: 5000
+ person: 
+  url: http://localhost:8090
+  read-timeout: 5000
+  write-timeout: 5000 
+  connection-timeout: 5000
