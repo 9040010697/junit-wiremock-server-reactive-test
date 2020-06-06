@@ -4,6 +4,7 @@ import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.wfc.model.Person;
 import com.wfc.utils.Constants;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -32,6 +33,7 @@ public class PersonClientTest {
         wireMockServer.start();
     }
 
+    @AfterAll
     static void tearDownAll() {
         wireMockServer.shutdown();
     }
